@@ -1,34 +1,36 @@
 #include <iostream>
 #include <vector>
 
-void bubbleSort(std::vector<int> &arr) {
+using namespace std;
+
+void bubbleSort(vector<int> &arr) {
     int n = arr.size();
     for (int i = 0; i < n; ++i) {
         for (int j = 1; j < n - i; ++j) {
             if (arr[j - 1] > arr[j]) {
-                std::swap(arr[j - 1], arr[j]);
+                swap(arr[j - 1], arr[j]);
             }
         }
     }
 }
 
 int main() {
-    std::vector<int> arr = {21, 57, 54, 92, 89, 24, 99, 19, 20, 63};
+    vector<int> arr = {21, 57, 54, 92, 89, 24, 99, 19, 20, 63};
 
-    std::cout << "Tablica przed sortowaniem:\n";
+    cout << "Tablica przed sortowaniem:\n";
     for (int num : arr) {
-        std::cout << num << " | ";
+        cout << num << " | ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
-    std::cout << "\nRozpoczecie sortowania...\n";
+    cout << "\nRozpoczecie sortowania...\n";
     bubbleSort(arr);
 
-    std::cout << "\nTablica po sortowaniu:\n";
+    cout << "\nTablica po sortowaniu:\n";
     for (int num : arr) {
-        std::cout << num << " | ";
+        cout << num << " | ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     return 0;
 }
