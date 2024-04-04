@@ -21,9 +21,9 @@ int main() {
     cout << endl;
 
     bubbleSort(arr); // Wywołanie funkcji sortującej
-
     cout << "\nTablica po sortowaniu:\n"; // Wyświetlenie zawartości wektora po sortowaniu
-    for (int num : arr) cout << num << " | ";
+    for (int num : arr) cout << num << " | "; // W kodzie zmienna arr jest wektorem liczb całkowitych
+    // w tym kodzie arr  przechowuje nieposortowane liczby całkowite przed wykonaniem sortowania bąbelkowego
     cout << endl;
 
     return 0;
